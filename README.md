@@ -1,4 +1,4 @@
-# 🧠 ScholarFlow: Autonomous Multi-Agent Research Assistant
+# 🧠 ScholarFlow: Autonomous Multi-Agent Research Assistant on ArXiv Studies
 
 ## Overview
 ScholarFlow is an agentic AI system designed to automate the academic literature review process. Utilizing the CrewAI framework, the system orchestrates multiple specialized AI agents to search for academic papers, extract key methodologies, and synthesize the findings into a cohesive report.
