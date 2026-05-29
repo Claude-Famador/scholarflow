@@ -17,6 +17,17 @@ The system operates using a sequential multi-agent architecture:
 * **Tools:** LangChain Community ArXiv API Wrapper.
 * **UI:** Gradio for the interactive web chatbot.
 
+```mermaid
+graph TD;
+    A[User UI] -->|Topic| B(CrewAI Orchestrator)
+    B --> C[Researcher Agent]
+    C <-->|Search| D[(ArXiv API)]
+    C -->|Extracted Data| E[Memory/Context]
+    E --> F[Synthesis Writer Agent]
+    F -->|Formatted Review| A
+>>>>>>> 3dbace4f09deb6cb4d4b468293c41de845995bba
+
+
 ## Setup Instructions
 1. Clone the repository:
    ```bash
@@ -34,12 +45,4 @@ The system operates using a sequential multi-agent architecture:
 
 4. Run main.py
 =======
-```mermaid
-graph TD;
-    A[User UI] -->|Topic| B(CrewAI Orchestrator)
-    B --> C[Researcher Agent]
-    C <-->|Search| D[(ArXiv API)]
-    C -->|Extracted Data| E[Memory/Context]
-    E --> F[Synthesis Writer Agent]
-    F -->|Formatted Review| A
->>>>>>> 3dbace4f09deb6cb4d4b468293c41de845995bba
+
