@@ -1,4 +1,4 @@
-# 🧠 ScholarFlow: Autonomous Multi-Agent Research Assistant
+# 🧠 ScholarFlow: Autonomous Multi-Agent Research Assistant on ArXiv Studies
 
 ## Overview
 ScholarFlow is an agentic AI system designed to automate the academic literature review process. Utilizing the CrewAI framework, the system orchestrates multiple specialized AI agents to search for academic papers, extract key methodologies, and synthesize the findings into a cohesive report.
@@ -10,6 +10,7 @@ The system operates using a sequential multi-agent architecture:
 3. **CrewAI Memory:** Internal context flow ensures data is retained between agent tasks.
 4. **Synthesis Writer Agent:** Receives the raw extraction from the Researcher and structures it into an academic literature review.
 
+<<<<<<< HEAD
 ## Tech Stack & Libraries
 * **Framework:** [CrewAI](https://www.crewai.com/) for multi-agent orchestration.
 * **LLM:** Llama-3.3-70b-versatile (via Groq API).
@@ -32,3 +33,13 @@ The system operates using a sequential multi-agent architecture:
    GROQ_API_KEY=your_actual_api_key_here
 
 4. Run main.py
+=======
+```mermaid
+graph TD;
+    A[User UI] -->|Topic| B(CrewAI Orchestrator)
+    B --> C[Researcher Agent]
+    C <-->|Search| D[(ArXiv API)]
+    C -->|Extracted Data| E[Memory/Context]
+    E --> F[Synthesis Writer Agent]
+    F -->|Formatted Review| A
+>>>>>>> 3dbace4f09deb6cb4d4b468293c41de845995bba
